@@ -3,3 +3,4 @@ M_XIM_DE_01_ximera_delete_label operations
 USING Ximera:1
 
 DELETE ENTITY Label
+
