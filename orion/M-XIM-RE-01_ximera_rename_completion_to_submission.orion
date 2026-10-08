@@ -3,3 +3,4 @@ M_XIM_RE_01_ximera_rename_completion_to_submission operations
 USING Ximera:1
 
 RENAME ENTITY Completion TO Submission
+
