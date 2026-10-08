@@ -1,0 +1,5 @@
+M_XIM_AA_01_ximera_add_completion_status operations
+
+USING Ximera:1
+
+ADD ATTR Completion::status: String

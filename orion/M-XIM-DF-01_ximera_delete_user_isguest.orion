@@ -1,0 +1,5 @@
+M_XIM_DF_01_ximera_delete_user_isguest operations
+
+USING Ximera:1
+
+DELETE User::isGuest

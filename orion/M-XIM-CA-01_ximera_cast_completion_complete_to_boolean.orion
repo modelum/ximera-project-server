@@ -1,0 +1,5 @@
+M_XIM_CA_01_ximera_cast_completion_complete_to_boolean operations
+
+USING Ximera:1
+
+CAST ATTR Completion::complete TO Boolean

@@ -1,0 +1,5 @@
+M_XIM_RF_01_ximera_rename_completion_date operations
+
+USING Ximera:1
+
+RENAME Completion::date TO completionDate
