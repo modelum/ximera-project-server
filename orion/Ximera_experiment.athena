@@ -1,0 +1,95 @@
+// Experimental Mongoose subgraph for OrionFlow evaluation.
+// Source: modelum/ximera-project-server
+// This is not intended to be a full reverse-engineered schema.
+
+Schema Ximera:1
+
+Root entity User
+{
+  +_id: Identifier,
+  googleOpenId: String,
+  courseraOAuthId: String,
+  twitterOAuthId: String,
+  ltiId: String,
+  githubId: String,
+  githubAccessToken: String,
+  replacedBy: ref<User as Identifier>?,
+  course: String,
+  superuser: Boolean,
+  username: String,
+  password: String,
+  name: String,
+  email: String,
+  displayName: String,
+  website: String,
+  location: String,
+  birthday: Timestamp,
+  biography: String,
+  xudos: Number,
+  xarma: Number,
+  isGuest: Boolean,
+  isAuthor: Boolean,
+  lastSeen: Timestamp
+}
+
+Root entity LtiBridge
+{
+  +_id: Identifier,
+  ltiId: String,
+  contextId: String,
+  contextLabel: String,
+  contextTitle: String,
+  resourceLinkId: String,
+  dueDate: Timestamp,
+  untilDate: Timestamp,
+  pointsPossible: Number,
+  resultScore: Number,
+  resultTotalScore: Number,
+  submittedScore: Boolean,
+  repository: String,
+  path: String,
+  user: ref<User as Identifier>?
+}
+
+Root entity State
+{
+  +_id: Identifier,
+  activityHash: String,
+  user: ref<User as Identifier>?,
+  data: Map
+}
+
+Root entity Completion
+{
+  +_id: Identifier,
+  activityPath: String,
+  repositoryName: String,
+  activityHash: String,
+  user: ref<User as Identifier>?,
+  complete: Number,
+  date: Timestamp
+}
+
+Root entity Label
+{
+  +_id: Identifier,
+  activityHash: String,
+  commit: String,
+  label: String
+}
+
+Root entity AccessToken
+{
+  +_id: Identifier,
+  keyid: String,
+  token: String
+}
+
+Root entity KeyAndSecret
+{
+  +_id: Identifier,
+  keyid: String,
+  ltiKey: String,
+  ltiSecret: String,
+  encryptedSecret: String
+}
