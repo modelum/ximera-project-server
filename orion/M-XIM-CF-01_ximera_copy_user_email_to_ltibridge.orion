@@ -3,3 +3,4 @@ M_XIM_CF_01_ximera_copy_user_email_to_ltibridge operations
 USING Ximera:1
 
 COPY User::email TO LtiBridge::email WHERE _id = user
+
